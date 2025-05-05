@@ -3,7 +3,7 @@
       const c = setTimeout(() => {
         document.body.classList.remove("not-loaded");
 
-        const titles = ('I love you').split('');
+        const titles = ('Happy mensive, Mikael.).split('');
         const titleElement = document.getElementById('title');
         let index = 0;
 
@@ -19,16 +19,24 @@
             index++;
             setTimeout(appendTitle, 300); // 300ms delay per huruf
           } else {
-            // Setelah teks utama selesai, tambahkan subtitle kecil
-            const subtitle = document.createElement('p');
-            subtitle.innerText = "Without realizing it, I've fallen this far with you. And here I bring beautiful flowers for beautiful person.";
-            subtitle.style.fontSize = '20px'; // Ukuran font lebih kecil
-            subtitle.style.marginTop = '2px'; // Spasi antara teks utama dan subtitle
-            subtitle.style.color = '#fff'; // Warna abu-abu untuk teks subtitle
+    // Setelah teks utama selesai, tambahkan subtitle kecil sebagai link
+    const subtitle = document.createElement('p');
 
-            // Menambahkan subtitle di bawah #title
-            titleElement.appendChild(subtitle);
-          }
+    const link = document.createElement('a');
+    link.href = "https://drive.google.com/folderview?id=1dNYvibzRsMWirJZOuxqTgS2vvmIw2chQ";
+    link.innerText = "Coba buka link ini";
+    link.style.color = '#fff'; // Warna teks link
+    link.style.textDecoration = 'underline'; // Supaya kelihatan seperti link
+    link.target = "_blank"; // Biar link terbuka di tab baru
+
+    subtitle.appendChild(link);
+    subtitle.style.fontSize = '20px';
+    subtitle.style.marginTop = '2px';
+
+    // Menambahkan subtitle di bawah #title
+    titleElement.appendChild(subtitle);
+}
+
         }
 
     appendTitle();
