@@ -3,7 +3,7 @@
       const c = setTimeout(() => {
         document.body.classList.remove("not-loaded");
 
-        const titles = ('Happy mensive, Mikael.').split('');
+        const titles = ('I Love You').split('');
         const titleElement = document.getElementById('title');
         let index = 0;
 
@@ -21,7 +21,7 @@
           } else {
             // Setelah teks utama selesai, tambahkan subtitle kecil
             const subtitle = document.createElement('p');
-            subtitle.innerText = "coba buka link ini https://drive.google.com/folderview?id=1dNYvibzRsMWirJZOuxqTgS2vvmIw2chQ";
+            subtitle.innerText = "Thank you for being a part of my life. I don’t know how I got this lucky, but meeting you feels like one of the best things that’s ever happened to me. I love you so much, Hadee.";
             subtitle.style.fontSize = '20px'; // Ukuran font lebih kecil
             subtitle.style.marginTop = '2px'; // Spasi antara teks utama dan subtitle
             subtitle.style.color = '#fff'; // Warna abu-abu untuk teks subtitle
